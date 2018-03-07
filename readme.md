@@ -1,4 +1,4 @@
-cd into directory
+cd to folder
 
 npm install
 
