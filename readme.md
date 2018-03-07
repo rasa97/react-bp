@@ -6,4 +6,4 @@ npm run build
 
 localhost:8080
 
-Start your React project from src/app.js
+Edit your React project from src/app.js
