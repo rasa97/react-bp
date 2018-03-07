@@ -4,7 +4,10 @@ import { render } from 'react-dom';
 class App extends React.Component{
     render(){
         return(
-            <p>Hello There!</p>
+            <div>
+                <h2>Hello There!</h2>
+                <p>Nice to meet you!</p>
+            </div>
         );
     }
 }
