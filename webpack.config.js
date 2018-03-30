@@ -1,34 +1,30 @@
-var path = require('path');
-var webpack = require('webpack');
+const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
-    entry: './src/app.js',
-    output: {
-     path: path.resolve(__dirname, 'build'),
-     filename: 'app.bundle.js'
+    entry : './src/app.js',
+    output : {
+        path : path.resolve(__dirname, 'build'),
+        filename : 'bundle.js'
     },
-    module: {
-        rules: [
+    devtool: 'inline-source-map',
+    module:{
+        rules : [
             {
-                test: /\.js$/,
                 loader: 'babel-loader',
+                test: /\.js$/,
+                exclude: /node_modules/,
                 query: {
-                    presets: ['es2015', 'react']
+                    cacheDirectory: true
                 }
             },
             {
-                test: /\.css$/,
-                use: ['style-loader', {
-                    loader: 'css-loader',
-                    options: {
-                        modules: true
-                    }
-                }]
+                use: ['style-loader', 'css-loader'],
+                test: /\.css$/
             }
-         ]
-     },
+        ]
+    },
     stats: {
         colors: true
     },
-    devtool: 'source-map'
- };
+};

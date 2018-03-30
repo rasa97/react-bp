@@ -1,25 +1,29 @@
 {
   "name": "react-bp",
   "version": "1.0.0",
-  "description": "React BoilerPlate with Webpack and Babel",
-  "main": "./src/app.js",
+  "description": "React Boilerplate with Webpack",
+  "main": "src/app.js",
   "scripts": {
-    "build": "webpack -p && webpack-dev-server --progress --hot --inline --output-public-path=/build/"
+      "start": "webpack-dev-server --open --progress --output-public-path=/build/",
+      "build": "webpack"
   },
+  "keywords": [],
   "author": "Ravisankar A V",
   "license": "ISC",
-  "dependencies": {
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0"
-  },
   "devDependencies": {
     "babel-core": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-preset-es2015": "^6.24.1",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.10",
-    "style-loader": "^0.20.2",
-    "webpack": "^3.11.0",
-    "webpack-dev-server": "^2.11.1"
+    "css-loader": "^0.28.11",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.4.1",
+    "webpack-cli": "^2.0.13",
+    "webpack-dev-server": "^3.1.1"
+  },
+  "dependencies": {
+    "react": "^16.3.0",
+    "react-dom": "^16.3.0",
+    "react-router": "^4.2.0"
   }
 }
